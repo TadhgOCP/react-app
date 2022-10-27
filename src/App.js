@@ -6,23 +6,28 @@ import { Videos } from './pages/Videos'
 import { useState } from 'react'
 import { Youtube } from './pages/Youtube'
 import { Home } from './pages/Home'
-import { Discord } from './pages/Discord'
 import { Twitter } from './pages/Twitter'
 import { Twitch } from './pages/Twitch'
 import { Spotify } from './pages/Spotify'
 import { Login } from './pages/Login'
 import { GooglePhotos } from './pages/GooglePhotos'
+import { Footer } from './components/Footer'
 
 function App() {
 
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const initialLoginStatusFromStorage =  window.localStorage.getItem('isLoggedIn')
+  const initialLoginStatus = initialLoginStatusFromStorage === 'TRUE' ? true : false
+
+  const [isLoggedIn, setIsLoggedIn] = useState(initialLoginStatus)
 
   const setLoginToTrue = () => {
     setIsLoggedIn(true)
+    window.localStorage.setItem('isLoggedIn', 'TRUE');
   }
 
   const setLoginToFalse = () => {
     setIsLoggedIn(false)
+    window.localStorage.setItem('isLoggedIn', 'FALSE');
   }
 
   if (isLoggedIn === false) {
@@ -41,7 +46,6 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="Videos" element={<Videos />} />
         <Route path="Youtube" element={<Youtube/>} />
-        <Route path="Discord" element={<Discord/>} />
         <Route path="Twitter" element={<Twitter/>} />
         <Route path="Spotify" element={<Spotify/>} />
         <Route path="Twitch" element={<Twitch/>} />
@@ -49,6 +53,7 @@ function App() {
         <Route path="GooglePhotos" element={<GooglePhotos/>} />
       </Routes>
     </Container>
+    <Footer />
     </div>
   );
 }

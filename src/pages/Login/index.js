@@ -10,30 +10,30 @@ export function Login (props) {
   const checkValue = () => {
     if (passwordText === 'Enter') {
       props.onSuccessfullLogin()
-  }
+    }
   }
 
   return (
     <>
-    <Row>
-      <Form>
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control
-          type="password"
-          placeholder="Password"
-          onChange={(e)=>{setPasswordText(e.currentTarget.value)}}/>
-      </Form.Group>
-      </Form>
-    </Row>
+      <Row>
+        <Form>
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control
+            type="password"
+            placeholder="Password"
+            onChange={(e) => setPasswordText(e.currentTarget.value)} />
+        </Form.Group>
+        </Form>
+      </Row>
 
-    <Row>
-      <Form>
-        <Button variant="primary" onClick={checkValue}>
-        Submit
-        </Button>
-      </Form>
-    </Row>
+      <Row>
+        <Form>
+          <Button variant="primary" onClick={checkValue}>
+          Submit
+          </Button>
+        </Form>
+      </Row>
     </>
   )
 }

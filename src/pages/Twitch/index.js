@@ -1,7 +1,17 @@
-import Row from 'react-bootstrap/Row';
+import { TwitchEmbed } from 'react-twitch-embed';
+import React, { useRef } from 'react';
+
 export function Twitch() {
-  return
-  <Row>
-    <iframe src="https://www.twitch.tv/xqc" height="400" width="600"></iframe>
-  </Row>
+
+  const embed = useRef();
+
+  const handleReady = (e) => {
+    embed.current = e;
+  };
+
+  return (
+    <TwitchEmbed channel="slimeirl" autoplay muted withChat darkMode={true} hideControls onVideoReady={handleReady} />
+  );
+
 }
+
