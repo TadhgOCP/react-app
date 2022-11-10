@@ -18,6 +18,7 @@ export function Navbar(props) {
             <Nav.Link><Link to="Spotify">Spotify</Link></Nav.Link>
             <Nav.Link><Link to="Videos">Videos</Link></Nav.Link>
             <Nav.Link><Link to="Twitch">Twitch</Link></Nav.Link>
+            <Nav.Link><Link to="OWLeague">OWLeague</Link></Nav.Link>
             {/* <Nav.Link><Link to="GooglePhotos">Google Photos</Link></Nav.Link> */}
           </Nav>
           <Button bsStyle="primary" onClick={props.onLogout}>Logout</Button>

@@ -12,6 +12,7 @@ import { Spotify } from './pages/Spotify'
 import { Login } from './pages/Login'
 import { GooglePhotos } from './pages/GooglePhotos'
 import { Footer } from './components/Footer'
+import { OWLeague } from './pages/OWLeague'
 
 function App() {
 
@@ -51,6 +52,7 @@ function App() {
         <Route path="Twitch" element={<Twitch/>} />
         <Route path="Login" element={<Login/>} />
         <Route path="GooglePhotos" element={<GooglePhotos/>} />
+        <Route path="OWLeague" element={<OWLeague/>} />
       </Routes>
     </Container>
     <Footer />

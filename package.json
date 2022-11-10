@@ -1,7 +1,6 @@
 {
   "name": "react-app",
   "version": "0.1.0",
-  "homepage": "https://tadhgocp.github.io/ReactApp",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -11,22 +10,15 @@
     "bootstrap": "^5.2.2",
     "googleapis": "^108.0.0",
     "googlephotos": "^0.3.5",
-    "mdb-react-ui-kit": "^4.2.0",
     "node-polyfill-webpack-plugin": "^2.0.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
-    "react-player": "^2.11.0",
     "react-router-dom": "^6.4.2",
-    "react-social-icons": "^5.15.0",
-    "react-twitch-embed": "^3.0.1",
     "react-twitter-widgets": "^1.11.0",
-    "sass": "^1.55.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
@@ -51,7 +43,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0",
     "react-app-rewired": "^2.2.1"
   }
 }
