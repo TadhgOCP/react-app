@@ -9,7 +9,7 @@ export function OWLeague() {
   const [rankings, setrankings] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:8080/rankings')
+    fetch(`${process.env.REACT_APP_API_URL}/rankings`)
     .then((response) => response.json())
     .then((data) => {
       const filteredList = filterByRanking(data)

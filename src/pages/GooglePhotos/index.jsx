@@ -12,7 +12,7 @@ export function GooglePhotos() {
 
   const getUrl = async () => {
     try {
-      const result = await axios.get('http://localhost:8080/googleapi')
+      const result = await axios.get(`${process.env.REACT_APP_API_URL}/googleapi`)
       window.location.href = result.data
     } catch {
 
