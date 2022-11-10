@@ -12,6 +12,7 @@ export function Youtube () {
 
 
   useEffect(() => {
+    getData()
     const timer = setInterval(() => getData(), 5000)
     return () => clearInterval(timer)
   }, [])
