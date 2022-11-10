@@ -12,7 +12,11 @@ export function Youtube () {
 
 
   useEffect(() => {
-    const getData = () => fetch('https://www.googleapis.com/youtube/v3/channels?part=statistics,contentDetails&key=AIzaSyDbGEpv8mrJa1TjyxDv1qoXuXW8odwNm0Q&id=UCURKbz7_kmJzlnBDrbWzpew')
+    const timer = setInterval(() => getData(), 5000)
+    return () => clearInterval(timer)
+  }, [])
+
+  const getData = () => fetch('https://www.googleapis.com/youtube/v3/channels?part=statistics,contentDetails&key=AIzaSyDbGEpv8mrJa1TjyxDv1qoXuXW8odwNm0Q&id=UCURKbz7_kmJzlnBDrbWzpew')
     .then((response) => response.json())
     .then((data) => {
       const stats = data.items[0].statistics
@@ -20,11 +24,6 @@ export function Youtube () {
       setSubCount(stats.subscriberCount)
       setVidCount(stats.videoCount)
     })
-
-  getData()
-
-  setInterval(() => getData(), 1000)
-  }, [])
 
   return (
       <Container>
