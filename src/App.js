@@ -13,6 +13,7 @@ import { Login } from './pages/Login'
 import { GooglePhotos } from './pages/GooglePhotos'
 import { Footer } from './components/Footer'
 import { OWLeague } from './pages/OWLeague'
+import { Amazon } from './pages/Amazon'
 
 function App() {
 
@@ -53,6 +54,7 @@ function App() {
         <Route path="Login" element={<Login/>} />
         <Route path="GooglePhotos" element={<GooglePhotos/>} />
         <Route path="OWLeague" element={<OWLeague/>} />
+        <Route path="Amazon" element={<Amazon/>} />
       </Routes>
     </Container>
     <Footer />

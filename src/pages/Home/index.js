@@ -11,31 +11,4 @@ export function Home () {
       console.log(data)
     })
   }, [])
-
-  return (
-    <>
-      <Row>
-      <Timeline
-        dataSource={{
-          sourceType: 'profile',
-          screenName: 'BBCNews'
-        }}
-        options={{
-          height: '600'
-        }}
-      />
-      </Row>
-      <Row>
-      <Timeline
-        dataSource={{
-          sourceType: 'profile',
-          screenName: 'rtenews'
-        }}
-        options={{
-          height: '600'
-        }}
-      />
-      </Row>
-  </>
-  )
 }
